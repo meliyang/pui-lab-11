@@ -19,7 +19,7 @@
 <body>
 
   <!--This is the container for the grid in Bootstrap-->
-  <div class="container-fluid">
+  <div class="container=">
     <h1>Hello World!</h1>
     <p>Resize the browser window to see the effect.</p>
     <p>The columns will automatically stack on top of each other when the screen is less than 768px wide.</p>
@@ -27,15 +27,67 @@
     <!--Here is a single row with a 4/8 column split in Bootstrap-->
     <div class="row">
       <div class="col" style="background-color:lavender;">.col</div>
- <!-- Add contact  form inside this DIV-->
+      <!-- Add contact  form inside this DIV-->
          <div class="col-6" style="background-color:lavenderblush;">.col-6</div>
         <div class="col" style="background-color:whitesmoke;">.col</div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3" style="background-color:lavender;">.col</div>
+      <!-- Add contact  form inside this DIV-->
+      <div class="col-sm-3" style="background-color:lavenderblush;">
+        Contact Form
+        <form class="form-horizontal" action="/action_page.php">
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="name">Name:</label>
+            <input type="name" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="email">Email:</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="subject">Subject:</label>
+            <input type="subject" class="form-control" id="subject">
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="body">Body:</label>
+            <input type="body" class="form-control" id="body">
+          </div>
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Contact us</button>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Thank you!</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Thanks for contacting us.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-6" style="background-color:whitesmoke;">.col</div>
     </div>
   </div>
 
   <br>
  <!-- Add modal for this  -->
-  <button type="button" class="btn btn-primary">Click Me!</button>
+  <!-- <button type="button" class="btn btn-primary">Click Me!</button> -->
 
 </body>
 </html>
